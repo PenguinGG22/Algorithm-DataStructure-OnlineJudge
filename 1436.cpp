@@ -1,44 +1,27 @@
-#include<iostream>
-#include<vector>
-#include<string>
-#include<algorithm>
-using namespace std;
+#include <iostream>
+#include <string>
 
 int main() {
-	ios_base::sync_with_stdio(false);
-	cin.tie(NULL);
+    std::ios_base::sync_with_stdio(false);
+    std::cin.tie(NULL);
 
-	int n, m;
-	cin >> n >> m;
-	vector<string> board(n);
+    int N;
+    std::cin >> N;
 
-	for (int i = 0; i < n; i++) {
-		cin >> board[i];
-	}
+    int count = 0;
+    int num = 665;
 
-	int min_cnt = 64;
-	for (int start_row = 0; start_row <= n - 8; start_row++) {
-		for (int start_col = 0; start_col <= m - 8; start_col++) {
+    while (true) {
+        num++;
+        std::string s = std::to_string(num);
+        if (s.find("666") != std::string::npos) {
+            count++;
+        }
+        if (count == N) {
+            std::cout << num << std::endl;
+            break;
+        }
+    }
 
-			int count_W = 0;
-			int count_B = 0;
-
-			for (int i = start_row; i < start_row + 8; i++) {
-				for (int j = start_col; j < start_col + 8; j++) {
-					if ((i + j) % 2 == 0) {
-						if (board[i][j] != 'W') count_W++;
-					}
-					else {
-						if (board[i][j] != 'B') count_W++;
-					}
-				}
-			}
-
-			int current_cnt = min(count_W, 64- count_W);
-			if (min_cnt > current_cnt) min_cnt = current_cnt;
-		}
-	}
-
-	cout << min_cnt;
-	return 0;
+    return 0;
 }
