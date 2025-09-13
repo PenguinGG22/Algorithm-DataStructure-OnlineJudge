@@ -1,2 +1,3 @@
 # BOJ
-BOJ solving
+
+BOJ solutions
