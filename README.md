@@ -1,3 +1,3 @@
 # BOJ
 
-BOJ solutions
+BOJ - Solutions
