@@ -1,24 +1,29 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int getGcd(int a, int b) {
-    if (b == 0) {
-        return a;
-    }
-    return getGcd(b, a % b);
-}
-
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int a, b;
-    cin >> a >> b;
-    int gcd = getGcd(a, b);
-    int lcm = (a * b) / gcd;
+    int N, M;
+    cin >> N >> M;
 
-    cout << gcd << '\n';
-    cout << lcm << '\n';
+    int max_num = max(N, M);
+    int min_num = min(N, M);
+
+    int GCD = 0;
+    while (true) {
+        if (max_num % min_num == 0) {
+            GCD = min_num;
+            break;
+        }
+        int tmp = max_num % min_num;
+        max_num = min_num;
+        min_num = tmp;
+    }
+    
+    int LCM = N * M / GCD;
+    cout << GCD << '\n' << LCM;
 
     return 0;
 }
