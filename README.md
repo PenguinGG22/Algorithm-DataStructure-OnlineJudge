@@ -12,3 +12,7 @@ cin.tie(NULL);
 (A+B)modM=((AmodM)+(BmodM))modM
 (A×B)modM=((AmodM)×(BmodM))modM
 ```
+## 르장드르 공식
+```
+
+```
