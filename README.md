@@ -15,4 +15,4 @@ $$ (A \times B) \pmod{M} = \left( (A \pmod{M}) \times (B \pmod{M}) \right) \pmod
 $$ C(M, N) = \frac{M \times (M-1) \times \dots \times (M-N+1)}{1 \times 2 \times \dots \times N} $$
 
 ## 유클리드 호제법
-$$ GCD(a, b) = \begin{cases} a & \text{if } b = 0 \\ GCD(b, \ a \pmod b) & \text{if } b \neq 0 \end{cases} $$
+$$ GCD(a, b) = \begin{cases} a & \text(b = 0) \\ GCD(b, \ a \pmod b) & \text(b \neq 0) \end{cases} $$
