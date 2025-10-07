@@ -5,17 +5,23 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int num = 20000303;
-    string N;
-    cin >> N;
+    int L;
+    cin >> L;
+    string str;
+    cin >> str;
 
-    long long remainder = 0;
+    long long hash_value = 0;
+    long long r_pow = 1;
+    long long M = 1234567891;
 
-    for (char c : N) {
-        remainder = (remainder * 10 + (c - '0')) % num;
+    for (int i = 0; i < L; i++) {
+        long long a_i = str[i] - 'a' + 1;
+        long long term = (a_i * r_pow) % M;
+        hash_value = (hash_value + term) % M;
+        r_pow = (r_pow * 31) % M;
     }
 
-    cout << remainder;
+    cout << hash_value;
 
     return 0;
 }
