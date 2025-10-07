@@ -1,28 +1,11 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-
-    int T;
-    cin >> T;
-    int Y = 0, M = 0;
-    while (T--) {
-        int I;
-        cin >> I;
-        Y += (I / 30 + 1) * 10;
-        M += (I / 60 + 1) * 15;
+    int input;
+    cin >> input;
+    for (int i = 0; i < input / 4; i++) {
+        cout << "long ";
     }
-    if (Y < M) {
-        cout << 'Y' << ' ' << Y;
-    }
-    else if (Y > M) {
-        cout << 'M' << ' ' << M;
-    }
-    else {
-        cout << 'Y' << ' ' << 'M' << ' ' << Y;
-    }
-
-    return 0;
+    cout << "int";
 }

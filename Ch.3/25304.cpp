@@ -1,30 +1,14 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-
-    while (true) {
-        string str;
-        cin >> str;
-        if (str == "0") break;
-
-        bool isTrue = true;
-        for (int i = 0; i < str.size() / 2; i++) {
-            if (str[i] != str[str.size() - (i + 1)]) {
-                isTrue = false;
-                break;
-            }
-        }
-
-        if (isTrue) {
-            cout << "yes" << '\n';
-        }
-        else {
-            cout << "no" << '\n';
-        }
+    int X, N, a, b;
+    int hap = 0;
+    cin >> X >> N;
+    for (int i = 0; i < N; i++) {
+        cin >> a >> b;
+        hap += a * b;
     }
-
-    return 0;
+    if (hap == X) cout << "Yes";
+    else cout << "No";
 }

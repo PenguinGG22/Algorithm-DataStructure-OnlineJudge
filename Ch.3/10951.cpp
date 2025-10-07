@@ -1,16 +1,13 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
 
-    int N;
-    cin >> N;
-    while (N--) {
-        for (int i = 0; i <= N; i++) cout << '*';
-        cout << '\n';
-    }
+	int a, b;
 
-    return 0;
+	while (cin >> a >> b) {
+		cout << a + b << '\n';
+	}
+
+	return 0;
 }

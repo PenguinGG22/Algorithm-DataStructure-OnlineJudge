@@ -1,39 +1,20 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-
-    int n;
-    cin >> n;
-
-    stack<int> s;
-    vector<char> result;
-    int current_num = 1;
-
-    for (int i = 0; i < n; ++i) {
-        int target;
-        cin >> target;
-
-        while (current_num <= target) {
-            s.push(current_num);
-            result.push_back('+');
-            current_num++;
-        }
-
-        if (s.top() == target) {
-            s.pop();
-            result.push_back('-');
-        } else {
-            cout << "NO\n";
-            return 0;
-        }
+    int input;
+    cin >> input;
+    
+    int(* arr)[2] = new int[input][2];
+    for (int i = 0; i < input; i++) {
+        int A = 0, B = 0;
+        cin >> A >> B;
+        arr[i][0] = A;
+        arr[i][1] = B;
     }
-
-    for (char op : result) {
-        cout << op << '\n';
+    for (int i = 0; i < input; i++) {
+        cout << "Case #" << i+1 << ": " << arr[i][0] << " + "<< arr[i][1]
+            <<" = " <<arr[i][0]+arr[i][1] << endl;
     }
-
-    return 0;
+    delete[] arr;
 }
