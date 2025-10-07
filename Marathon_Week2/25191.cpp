@@ -5,16 +5,10 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int T;
-    cin >> T;
-
-    while (T--) {
-        int N;
-        cin >> N;
-        int next = N % 100;
-        if ((N + 1) % next == 0) cout << "Good" << '\n';
-        else cout << "Bye" << '\n';
-    }
+    int N, A, B;
+    cin >> N >> A >> B;
+    if (A / 2 + B > N) cout << N;
+    else cout << A / 2 + B;
 
     return 0;
 }
