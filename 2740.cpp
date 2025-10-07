@@ -1,0 +1,44 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    int A[100][100];
+    int B[100][100];
+    int C[100][100] = {0};
+
+    int N, M, K;
+
+    cin >> N >> M;
+    for (int i = 0; i < N; ++i) {
+        for (int j = 0; j < M; ++j) {
+            cin >> A[i][j];
+        }
+    }
+
+    cin >> M >> K;
+    for (int i = 0; i < M; ++i) {
+        for (int j = 0; j < K; ++j) {
+            cin >> B[i][j];
+        }
+    }
+
+    for (int i = 0; i < N; ++i) {
+        for (int j = 0; j < K; ++j) {
+            for (int l = 0; l < M; ++l) {
+                C[i][j] += A[i][l] * B[l][j];
+            }
+        }
+    }
+
+    for (int i = 0; i < N; ++i) {
+        for (int j = 0; j < K; ++j) {
+            cout << C[i][j] << " ";
+        }
+        cout << "\n";
+    }
+
+    return 0;
+}
