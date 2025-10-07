@@ -5,21 +5,28 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int N, M;
-    cin >> N >> M;
-
-    map<string, string> key;
-    for (int i = 0; i < N; ++i) {
-        string getsite, getpw;
-        cin >> getsite >> getpw;
-        key[getsite] = getpw;
+    int lamda;
+    cin >> lamda;
+    if (lamda >= 620 && lamda <= 780) {
+        cout << "Red";
     }
-
-    for (int i = 0; i < M; ++i) {
-        string findsite;
-        cin >> findsite;
-
-        cout << key[findsite] << '\n';
+    else if (lamda >= 590 && lamda < 620) {
+        cout << "Orange";
+    }
+    else if (lamda >= 570 && lamda < 590) {
+        cout << "Yellow";
+    }
+    else if (lamda >= 495 && lamda < 570) {
+        cout << "Green";
+    }
+    else if (lamda >= 450 && lamda < 495) {
+        cout << "Blue";
+    }
+    else if (lamda >= 425 && lamda < 450) {
+        cout << "Indigo";
+    }
+    else if (lamda >= 380 && lamda < 425) {
+        cout << "Violet";
     }
 
     return 0;

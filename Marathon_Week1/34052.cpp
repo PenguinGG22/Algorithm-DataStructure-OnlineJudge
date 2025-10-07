@@ -5,30 +5,15 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int N;
-    cin >> N;
-
-    if (N == 0) {
-        cout << 0;
-        return 0;
+    int sum = 0;
+    for (int i = 0; i < 4; i++) {
+        int input = 0;
+        cin >> input;
+        sum += input;
     }
 
-    vector<int> vec(N);
-    for (int i = 0; i < N; i++) {
-        cin >> vec[i];
-    }
-
-    sort(vec.begin(), vec.end());
-
-    int cut = round(N * 15.0 / 100.0);
-    int cnt = N - 2 * cut;
-
-    double sum = 0;
-    for (int i = cut; i < N - cut; i++) {
-        sum += vec[i];
-    }
-
-    cout << round(sum / cnt);
+    if (sum <= 1500) cout << "Yes";
+    else cout << "No";
 
     return 0;
 }

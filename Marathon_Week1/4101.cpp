@@ -5,17 +5,13 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int num = 20000303;
-    string N;
-    cin >> N;
-
-    long long remainder = 0;
-
-    for (char c : N) {
-        remainder = (remainder * 10 + (c - '0')) % num;
+    while (true) {
+        int N, M;
+        cin >> N >> M;
+        if (N == 0 && M == 0) break;
+        if (N > M) cout << "Yes" << '\n';
+        else cout << "No" << '\n';
     }
-
-    cout << remainder;
 
     return 0;
 }
