@@ -17,3 +17,6 @@ $$ C(M, N) = \frac{M \times (M-1) \times \dots \times (M-N+1)}{1 \times 2 \times
 ## 유클리드 호제법
 $$ GCD(a, b) = \begin{cases} a & \text(b = 0) \\ GCD(b, \ a \pmod b) & \text(b \neq 0) \end{cases} $$
 $$ LCM(a, b) = \frac{a \times b}{GCD(a,b)} $$
+
+## Celing
+$$ \frac{A + B - 1}{B} $$
