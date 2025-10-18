@@ -2,7 +2,7 @@
 
 ## Algorithm Drills
 백준 단계별로 풀어보기 (Ch.1 ~ Ch.50) Cpp  
-백준 sovled.ac Class (Class.1 ~ Class.6) Cpp
+백준 sovled.ac Class (Class.1 ~ Class.6) Cpp  
 백준 sovled.ac 마라톤 Cpp  
 
 ## Online Judge STL/IO Setting
