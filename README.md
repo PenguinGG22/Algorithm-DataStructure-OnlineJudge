@@ -1,6 +1,6 @@
-# BOJ
+## Baekjoon
 
-## Algorithm Drills
+### Algorithm Drills
 백준 단계별로 풀어보기 (Ch.1 ~ Ch.50) Cpp  
 백준 sovled.ac Class (Class.1 ~ Class.6) Cpp  
 백준 sovled.ac Weekly Marathon Cpp  
@@ -12,23 +12,22 @@ ios_base::sync_with_stdio(false);
 cin.tie(NULL);
 ```
 
-## 모듈러 공식
-$$ (A+B) \pmod M = ((A \pmod M) + (B \pmod M)) \pmod M $$
-$$ (A \times B) \pmod M = ((A \pmod M) \times (B \pmod M)) \pmod M $$
+## Math Formula
+```
+// Modular 
+(A+B)%C = (A%C+B%C)%C
+(AxB)%C = (A%CxB%C)%C
 
-## 조합 공식
-$$ C(M, N) = \frac{M \times (M-1) \times \cdots \times (M-N+1)}{1 \times 2 \times \cdots \times N} $$
+// Combinations  
+C(M,N) = (M×(M−1)×...×(M−N+1))/(1x2x...xN)
 
-## 유클리드 호제법
-$$
-GCD(a, b) = \begin{cases} 
-a & \text{if } b = 0 \\ 
-GCD(b, a \pmod b) & \text{if } b \neq 0 
-\end{cases}
-$$
-$$
-LCM(a, b) = \frac{a \times b}{GCD(a, b)}
-$$
+// Euclidean algorithm
+GCD(a,b) = a (if b=0), GCD(b,a%b)
+LCM(a,b) = a x b / GCD(a,b)
+```
 
-## Celing
-$$ \frac{A + B - 1}{B} $$
+## Syntax
+```
+// two-dimensional array
+vector<vector<bool>> A(N, vector<bool>(N));
+```
